@@ -1,32 +1,82 @@
-# SpringBootAPI-Implementation
-Employee REST API
-This is a Spring Boot application that provides a simple RESTful API to manage employee data. It follows a layered architecture using Controller, Service, and Repository layers.
+Employee Management REST API – Spring Boot Project
+A layered RESTful API built using Spring Boot for managing employee records with CRUD operations.
 
-Key Features:
-REST APIs to perform basic CRUD operations
-Layered architecture (Presentation, Service, Persistence)
-Uses DTOs for data transfer between layers
-Integrated with H2 in-memory database
-Object mapping handled using ModelMapper
-Built using Spring Boot, Spring Data JPA, Lombok
+🛠 Tech Stack
+Framework: Spring Boot
 
-Tech Stack:
-Java 17
-Spring Boot
-Spring Data JPA
-H2 Database
-Maven
-ModelMapper
+Language: Java 17
 
-API Overview:
-GET /employees – Get all employees
-GET /employees/{id} – Get employee by ID
-POST /employees – Create new employee
-PUT /employees/{id} – Update employee
-DELETE /employees/{id} – Delete employee
+ORM: Spring Data JPA
 
-How to Run:
-Clone the repo
-Open in IDE or run with Maven
-App runs at http://localhost:8080
-Access H2 Console at http://localhost:8080/h2-console
+Database: H2 (In-memory)
+
+Build Tool: Maven
+
+Object Mapping: ModelMapper
+
+Testing: JUnit (via spring-boot-starter-test)
+
+Others: Lombok, Keycloak (Authentication)
+
+📁 Project Structure
+css
+Copy
+Edit
+employee-rest-api/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── yourpackage/
+│   │   │           ├── controller/
+│   │   │           ├── dto/
+│   │   │           ├── entity/
+│   │   │           ├── repository/
+│   │   │           └── service/
+│   │   └── resources/
+│   │       └── application.properties
+└── pom.xml
+🚀 Features
+✅ Create, Read, Update, Delete employees
+
+🔐 Integrated Keycloak for authentication
+
+📦 DTOs for data abstraction
+
+🔄 ModelMapper for clean object mapping
+
+🧪 Basic testing setup with JUnit
+
+⚡ In-memory H2 database for quick development
+
+▶️ Getting Started
+🔹 1. Clone Repository
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/employee-rest-api.git
+cd employee-rest-api
+🔹 2. Run Application
+bash
+Copy
+Edit
+./mvnw spring-boot:run
+Or run from your IDE.
+
+Visit: http://localhost:8080
+
+📌 API Endpoints
+Method	Endpoint	Description
+GET	/employees	Get all employees
+GET	/employees/{id}	Get employee by ID
+POST	/employees	Create new employee
+PUT	/employees/{id}	Update employee
+DELETE	/employees/{id}	Delete employee
+
+💡 Notes
+Access H2 Console at: http://localhost:8080/h2-console
+
+Update application.properties for DB config if switching to MySQL/PostgreSQL.
+
+This project uses layered architecture for maintainability and scalability.
+
